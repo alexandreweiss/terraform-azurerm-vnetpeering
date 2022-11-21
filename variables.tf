@@ -2,6 +2,14 @@ variable "left_vnet_name" {
   description = "Left side vnet name of the peering"
 }
 
+variable "left_vnet_id" {
+  description = "Left side vnet id of the peering"
+}
+
+variable "right_vnet_name" {
+  description = "Right side vnet name of the peering"
+}
+
 variable "right_vnet_id" {
   description = "Right side vnet id of the peering"
 }
@@ -26,6 +34,10 @@ variable "use_remote_gateways" {
   description = "Set to true if you want to use remote gateway to reach branch connectivity"
 }
 
-variable "resource_group_name" {
-  description = "Resource group name of the remote vnet"
+variable "left_vnet_resource_group_name" {
+  description = "Resource group name of the left vnet"
+}
+
+variable "right_vnet_resource_group_name" {
+  description = "Resource group name of the right vnet"
 }

@@ -6,14 +6,14 @@ Terraform module to create intra subscription vnet peerings between a left side 
 
 | Name                                                                      | Version        |
 |---------------------------------------------------------------------------|----------------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.2         |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | >= 3.11, < 4.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | |
 
 ## Providers
 
 | Name                                                          | Version        |
 |---------------------------------------------------------------|----------------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.11, < 4.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) |  |
 
 ## Modules
 
@@ -29,9 +29,12 @@ No modules.
 
 | Name                                                                                                                                                                                                          | Description                                                                                  | Type                                                                    | Default                                                                      | Required |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------|:--------:|
-| <a name="resource_group_name"></a> [resource\_group\_name](#resource\_group\_name)                                                                                                               | Name of the resource group of the left side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
-| <a name="left_vnet_name"></a> [left\_vnet\_name](#left\_vnet\_name)                                                                                                                                   | The name of the vnet on the left side of the peering.                                       | `list(string)`                                                          |           n/a                                           |    yes    |
-| <a name="right_vnet_id"></a> [right\_vnet\_id](#right\_vnet\_id)                                                                                                               | Name of the resource group of the left side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
+| <a name="left_vnet_resource_group_name"></a> [left\_vnet\_resource\_group\_name](#left\_vnet_\resource\_group\_name)                                                                                                               | Name of the resource group of the left side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
+| <a name="left_vnet_name"></a> [left\_vnet\_name](#left\_vnet\_name)                                                                                                                                   | The name of the vnet on the left side of the peering.                                       | `string`                                                          |           n/a                                           |    yes    |
+| <a name="left_vnet_id"></a> [left\_vnet\_id](#left\_vnet\_id)                                                                                                               | Id of the left side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
+| <a name="right_vnet_resource_group_name"></a> [right\_vnet\_resource\_group\_name](#right\_vnet\_resource\_group\_name)                                                                                                               | Name of the resource group of the left side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
+| <a name="right_vnet_name"></a> [right\_vnet\_name](#right\_vnet\_name)                                                                                                               | Name of the resource group of the right side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
+| <a name="right_vnet_id"></a> [right\_vnet\_id](#right\_vnet\_id)                                                                                                               | Id of the right side vnet.                                                   | `string`                                                                | n/a                                                                          |   yes    |
 
 ## Outputs
 
