@@ -23,10 +23,7 @@ No modules.
 
 | Name                                                                                                                                                                                | Type     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| [azurerm_subnet.subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)                                                                     | resource |
-| [azurerm_subnet_network_security_group_association.vnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_network_security_group_association) | resource |
-| [azurerm_subnet_route_table_association.vnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_route_table_association)                       | resource |
-| [azurerm_virtual_network.vnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network)                                                     | resource |
+| [azurerm_virtual_network_peering](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network_peering)                                                     | resource |
 
 ## Inputs
 
@@ -40,6 +37,6 @@ No modules.
 
 | Name                                                                                                   | Description                                                                                           |
 |--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| <a name="output_vnet_address_space"></a> [vnet\_address\_space](#output\_vnet\_address\_space)         | The address space of the newly created vNet                                                           |
+None
 <!-- END_TF_DOCS -->
 
