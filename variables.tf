@@ -2,16 +2,8 @@ variable "left_vnet_name" {
   description = "Left side vnet name of the peering"
 }
 
-variable "left_vnet_id" {
-  description = "Left side vnet id of the peering"
-}
-
 variable "right_vnet_name" {
   description = "Right side vnet name of the peering"
-}
-
-variable "right_vnet_id" {
-  description = "Right side vnet id of the peering"
 }
 
 variable "allow_forwarded_traffic" {
