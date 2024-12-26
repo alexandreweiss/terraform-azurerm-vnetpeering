@@ -16,12 +16,22 @@ variable "allow_virtual_network_access" {
   description = "Allow traffic to pass across peered vnet if true. Set to false to manage your own NSG rules"
 }
 
-variable "allow_gateway_transit" {
+variable "left_allow_gateway_transit" {
   default = false
   description = "Set to true if you want to allow peered vnet to reach this vnet Gateway"
 }
 
-variable "use_remote_gateways" {
+variable "left_use_remote_gateways" {
+  default = false
+  description = "Set to true if you want to use remote gateway to reach branch connectivity"
+}
+
+variable "right_allow_gateway_transit" {
+  default = false
+  description = "Set to true if you want to allow peered vnet to reach this vnet Gateway"
+}
+
+variable "right_use_remote_gateways" {
   default = false
   description = "Set to true if you want to use remote gateway to reach branch connectivity"
 }
