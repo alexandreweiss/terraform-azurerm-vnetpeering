@@ -9,7 +9,7 @@ data "azurerm_virtual_network" "right_vnet_data" {
 }
 
 resource "azurerm_virtual_network_peering" "left_right_0" {
-  count = var.left_allow_gateway_transit ? 1 : 0
+  count = var.left_allow_gateway_transit || (var.left_allow_gateway_transit == false && var.right_allow_gateway_transit == false) ? 1 : 0
 
   allow_forwarded_traffic      = var.allow_forwarded_traffic
   allow_virtual_network_access = var.allow_virtual_network_access
@@ -36,7 +36,7 @@ resource "azurerm_virtual_network_peering" "left_right_1" {
 }
 
 resource "azurerm_virtual_network_peering" "right_left_0" {
-  count = var.right_allow_gateway_transit ? 1 : 0
+  count = var.right_allow_gateway_transit || (var.left_allow_gateway_transit == false && var.right_allow_gateway_transit == false) ? 1 : 0
 
   allow_forwarded_traffic      = var.allow_forwarded_traffic
   allow_virtual_network_access = var.allow_virtual_network_access
