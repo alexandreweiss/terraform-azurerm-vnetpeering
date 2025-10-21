@@ -7,32 +7,32 @@ variable "right_vnet_name" {
 }
 
 variable "allow_forwarded_traffic" {
-  default = false
+  default     = false
   description = "If you want to allow forwarded traffic, set to true. Enable traffic from source IP not part of any side of the peering"
 }
 
 variable "allow_virtual_network_access" {
-  default = true
+  default     = true
   description = "Allow traffic to pass across peered vnet if true. Set to false to manage your own NSG rules"
 }
 
 variable "left_allow_gateway_transit" {
-  default = false
+  default     = false
   description = "Set to true if you want to allow peered vnet to reach this vnet Gateway"
 }
 
 variable "left_use_remote_gateways" {
-  default = false
+  default     = false
   description = "Set to true if you want to use remote gateway to reach branch connectivity"
 }
 
 variable "right_allow_gateway_transit" {
-  default = false
+  default     = false
   description = "Set to true if you want to allow peered vnet to reach this vnet Gateway"
 }
 
 variable "right_use_remote_gateways" {
-  default = false
+  default     = false
   description = "Set to true if you want to use remote gateway to reach branch connectivity"
 }
 
@@ -42,4 +42,9 @@ variable "left_vnet_resource_group_name" {
 
 variable "right_vnet_resource_group_name" {
   description = "Resource group name of the right vnet"
+}
+
+variable "subscription_id" {
+  description = "Subscription ID where both vnets are located"
+  default     = "dummy"
 }
